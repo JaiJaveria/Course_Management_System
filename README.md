@@ -2,3 +2,4 @@
 A Course Management System for The University of Wisconsin Madison. Done as a project in the COL362: Introduction to DBMS course at IIT Delhi
 The data that we would be working on is taken from: https://www.kaggle.com/Madgrades/uw-madison-courses
 
+A demostration of our working system: https://drive.google.com/file/d/1mJKFb27aCpLbkgED3ENUNf29iWzZXxPC/view?usp=sharing
