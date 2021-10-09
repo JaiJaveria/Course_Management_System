@@ -1,5 +1,5 @@
 
-# Course_Management_System
+# Course Management System
 A Course Management System for The University of Wisconsin Madison. Done as a project in the COL362: Introduction to DBMS course at IIT Delhi.
 
 Our project can be used by students and instructors to manage their courses. Instructors can add course offerings to which students can register. There is also a third user for the admin/registrar to start a term, start and end the add drop phase, add new students and courses. In addition to these there are a lot of other functionalities we have implemented that we have discussed in the subsequent sections.
@@ -15,7 +15,7 @@ A demostration of our working system is present on google drive: [DemoVideo]
 The data upon which we made the system was majorly taken from Kaggle whose link is provided in the Resource section. This dataset did not have have term code information. This we manually scraped from The University's [Division of Business Services Website]
 
 The following data cleaning was undertaken
-- In the sections table of the dataset, null values were actually 'null' i.e. a string. We updated it by changing that to sql NULL.
+- In the sections table of the dataset, null values were actually 'null' i.e. a string. We updated it by changing that to SQL NULL.
 - We wanted to simulate the course registration process in our project. For this we came up with a notion of registration limit. For a course offered, students can directly add themselves until the limit is full. After that, a pending request to the instructor is sent and it is accepted or rejected by them. For this we calculated the registration limit of all the course offerings. This was done via the grade_distribution table. This contains the distribution of the number of grades for each course. We calculated the registration limit for a course offering and section via summing all the number of grades given for that. We added this to the section table.
 - We added some new tables like pending_requests, rejected_requests, course_registrations, current_term, adddrop  to simulate the course registration/pending/drop process. The dataset did not have a table for students, we added one.
 
