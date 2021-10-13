@@ -11,6 +11,18 @@ Our project can be used by students and instructors to manage their courses. Ins
 
 A demostration of our working system is present on google drive: [DemoVideo] 
 
+
+## Installation Instructions
+
+- Clone this repository on your local computer.
+- Our project uses flask and psycopg2-binary so oe needs to download the same before use. The following command downloads the same.
+```
+bash setup_front_end.sh
+```
+- To start the flash server do
+```
+bash run.sh
+```
 ## Data Source
 The data upon which we made the system was majorly taken from Kaggle whose link is provided in the Resource section. This dataset did not have have term code information. This we manually scraped from The University's [Division of Business Services Website]
 
