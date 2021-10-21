@@ -19,6 +19,18 @@ A demostration of our working system is present on google drive: [DemoVideo]
 ```
 bash setup_front_end.sh
 ```
+- Below are the configurations for the Postgres Server:
+```
+dbname=group_13
+user=group_13
+port=5432
+```
+Note: You must change the host's IP address in the following files before proceeding any further
+1. [app.py](https://github.com/JaiJaveria/Course_Management_System/blob/main/app.py) (Line No. - 12)
+2. [students.py](https://github.com/JaiJaveria/Course_Management_System/blob/main/students.py) (Line No. - 5)
+3. [Admin.py](https://github.com/JaiJaveria/Course_Management_System/blob/main/Admin.py) (Line No. - 6)
+- Download the [data dump](https://drive.google.com/drive/folders/1HDx3uShbgdi1MJdjkv7QZJDr8yh0lLM7?usp=sharing) and upload it on the Postgres server.
+
 - To start the flash server do
 ```
 bash run.sh
