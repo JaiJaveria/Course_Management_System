@@ -28,7 +28,7 @@ begin
 	insert into course_offerings values (COID, CID, TC,/*course name*/(select courses.name from courses where courses.uuid=CID));
 
 	with t as --find a room and schedule for this course
-	(select rooms.uuid as room_uuid, schedule_uuid from rooms, disjoint_schedule except (select room_uuid,schedule_uuid from sections, course_offerings where course_offerings.term_code=1214 and sections.course_offering_uuid=course_offerings.uuid) limit 1)
+	(select rooms.uuid as room_uuid, schedule_uuid from rooms, ( select schedule_uuid from disjoint_schedule except (select schedule_uuid from sections, ( select * from teachings where teachings.instructor_id=INSTRUCTOR) t where sections.uuid=t.section_uuid)) disjoint_schedule except (select room_uuid,schedule_uuid from sections, course_offerings where course_offerings.term_code=TC and sections.course_offering_uuid=course_offerings.uuid) limit 1)
 	insert into sections select SECTION_ID, COID, ST, SN, t.room_uuid /*room id*/, /*schedule uuid*/t.schedule_uuid, LIM from t;
 	if(not ROOM_REQ)
 	then
