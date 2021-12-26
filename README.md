@@ -1,5 +1,5 @@
 
-# Course Management System
+# UWMa Course Management System
 A Course Management System for The University of Wisconsin Madison.
 
 Our project can be used by students and instructors to manage their courses. Instructors can add course offerings to which students can register. There is also a third user for the admin/registrar to start a term, start and end the add drop phase, add new students and courses. In addition to these there are a lot of other functionalities we have implemented that we have discussed in the subsequent sections.
